@@ -47,7 +47,7 @@ footer {
     font-size: 0.8em; 
     margin-top: 20px; 
     color: gray;
-}
+  }
 
 .navbar {
   display: flex;
@@ -91,3 +91,58 @@ footer {
     border-radius: 19px;
     padding: 15px;
 }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    body {
+      margin: 5px;
+      font-size: 1em;
+    }
+    .container {
+      padding: 5px;
+      border-width: 1px;
+    }
+    .header {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    .grid-container {
+      display: block;
+      border-top: none;
+    }
+    .section {
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+      padding: 8px 0;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 5px;
+    }
+    .navbar-left {
+      margin-bottom: 10px;
+    }
+    .logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+    .your-name {
+      font-size: 1em;
+    }
+    .three-box {
+      font-size: 15px;
+      padding: 10px;
+      margin: 5px 0;
+    }
+    ul {
+      padding: 0 5px;
+    }
+    li {
+      padding: 6px 0;
+    }
+  }
