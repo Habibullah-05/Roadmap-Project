@@ -94,6 +94,13 @@ footer {
 
   /* Responsive styles */
   @media (max-width: 768px) {
+    .navbar-right {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
     body {
       margin: 5px;
       font-size: 1em;
@@ -125,14 +132,24 @@ footer {
     }
     .navbar-left {
       margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
     .logo {
       width: 32px;
       height: 32px;
       margin-right: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     }
     .your-name {
       font-size: 1em;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
     }
     .three-box {
       font-size: 15px;
