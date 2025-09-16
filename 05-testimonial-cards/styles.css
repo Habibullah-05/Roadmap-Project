@@ -118,6 +118,13 @@ a {
   margin-bottom: 1rem;
 }
 
+.card-3-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
 /* Speech bubbles */
 .speech-bubble {
     position: relative;
@@ -166,7 +173,7 @@ a {
     align-items: center;
     gap: 10px;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 
@@ -203,9 +210,11 @@ a {
 }
 
 .prev::before {
-  content: '❮';
+    margin-right: 26px;
+    content: '❮';
 }
 
 .next::before {
+    margin-left: 30px;
   content: '❯';
 }
