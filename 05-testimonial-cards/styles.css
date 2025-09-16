@@ -192,6 +192,16 @@ a {
   transition: opacity 0.3s, transform 0.3s;
 }
 
+.profile-pic-small.focused {
+    opacity: 1;
+    transform: scale(1.35);
+    box-shadow: 0 0 0 2px #222;
+    z-index: 2;
+    filter: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .prev::before {
   content: '❮';
 }
