@@ -1,6 +1,16 @@
-.calendar-icon {
-	width: 22px;
-	height: 22px;
-	object-fit: contain;
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4px;
+}
+
+
+.datepicker-input img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+
 }
 
