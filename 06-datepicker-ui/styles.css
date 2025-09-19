@@ -1,7 +1,9 @@
 body {
     min-height: 100vh;
     align-items: center;
+    display: flex;
     justify-content: center;
+    padding: auto;
 }
 .calendar-center-wrapper {
     min-height: 100vh;
@@ -32,13 +34,12 @@ body {
         color : white;
         background-color: #222324;
         text-align: center;
+        margin: auto;
         }
     .calendar-button {
         border: none;
         background-color: #222324;
-
-        align-items: right;
-        width: 100%;
+        margin-left: auto;
     }
 
 
@@ -78,11 +79,9 @@ body {
 
 
 .datepicker-input img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
-    vertical-align: middle;
-
 }
 
 .day-names {
