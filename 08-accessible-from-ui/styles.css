@@ -4,3 +4,7 @@
     max-width: 280px;
     outline: 2px solid black;
 }
+
+.button {
+    margin-top: 20px;
+}
