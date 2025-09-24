@@ -93,7 +93,7 @@ body {
     color: #fff;
     padding: 15px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
@@ -168,7 +168,6 @@ body {
     padding: 8px 0;
     color: #555;
     font-size: 0.95em;
-    border-bottom: 1px solid #eee;
 }
 
 .todo-list li:last-child {
