@@ -1,0 +1,9 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: (1fr, 1fr, 1fr);
+}
+
+/* image size */
+.image-grid img {
+    width: 100px ;
+}
