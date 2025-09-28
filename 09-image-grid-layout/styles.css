@@ -1,9 +1,12 @@
 .image-grid {
     display: grid;
-    grid-template-columns: (1fr, 1fr, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
 }
 
 /* image size */
 .image-grid img {
-    width: 100px ;
+    width: 100%; ;
 }
