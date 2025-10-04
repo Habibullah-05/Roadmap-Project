@@ -8,7 +8,7 @@ body {
 a {
     color: black;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 50px;
 }
 
 
@@ -28,10 +28,10 @@ a {
 
     /* Tooltip box appearance */
     width: 150px; 
-    background-color: #333;
+    background-color: #141414;
     color: #fff;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 8px 10px;
     font-size: 0.85em;
     
@@ -56,11 +56,45 @@ a {
     border-style: solid;
 
     /* Creates a downward-pointing triangle */
-    border-color: #333 transparent transparent transparent; 
+    border-color: #141414 transparent transparent transparent; 
         
     }
 
     .tooltip-container:hover .tooltip-text {
     visibility: visible;
+    opacity: 1;
+    }
+
+    /* Home (fade-in effect) */
+    .home .tooltip-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+
+    .home:hover .tooltip-text {
+    opacity: 1;
+    }
+
+    /* Projects (slide-in effect) */
+    .projects .tooltip-text {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .projects:hover .tooltip-text {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    }
+
+    /* Contact (scale-in effect) */
+    .contact .tooltip-text {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .contact:hover .tooltip-text {
+    transform: translateX(-50%) scale(1);
     opacity: 1;
     }
