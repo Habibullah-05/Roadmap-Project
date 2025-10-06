@@ -35,15 +35,43 @@
     border-top: 1px solid #ccc;
     background-color: rgb(46, 43, 43);
     color: white;
+    border: none;
+}
+
+.tab-link {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    .tab-link.active {
+        border-bottom : 4px solid #33598a;
+        border-radius: 2px;
+    }
+
+.tab-panel {
+    animation: fadeEffect 0.5s;
+
+}
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 /* img size */
-
 .tab-panels img {
     border-radius: 9px;
     width: 250px;
     height: auto;
 }
+    .tab-panels #tab4 img {
+        width: 500px;
+    }
 
 
 /* ----- Tab 3 ----- */
