@@ -13,5 +13,5 @@ function openTab(evt, tabName) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.tab-panels').style.display = 'block';
+  document.querySelector('.tab-panel').style.display = 'block';
 });
