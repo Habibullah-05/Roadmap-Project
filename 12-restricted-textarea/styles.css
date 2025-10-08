@@ -1,0 +1,22 @@
+textarea {
+    color: white;
+    border-radius: 7px;
+    background-color: rgb(49, 48, 48);
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 100px;
+    box-sizing: border-box;
+}
+    ::placeholder {
+        color: #faf8f8;
+        font-style: italic;
+    }
+
+label {
+    font-weight: bold;
+    margin-bottom: 2px;
+    display: block;
+}
