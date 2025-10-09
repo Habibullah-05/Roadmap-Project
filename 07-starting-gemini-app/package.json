@@ -9,13 +9,13 @@
     "google ai"
   ],
   "author": "Habibullah",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@google/genai": "^1.21.0",
-    "dotenv": "^17.2.2"
+    "dotenv": "^17.2.3"
   }
 }
