@@ -8,7 +8,12 @@
 </head>
 
 <body>
-    <label class="message">Write your Message:</label><br>
-        <textarea class="textbox" name="w3review" rows="4" cols="50" placeholder="write your message here..."></textarea>
+        <div class="message">
+            
+            <h1>Write your Message:</h1>
+            <textarea class="textbox" name="w3review" rows="4" cols="50" maxlength="250" placeholder="write your message here..."></textarea>
+            <span id="charCount">0 / 250</span>
+        </div>
+    <script src="script.js"></script>
 </body>
 </html>
