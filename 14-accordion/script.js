@@ -1,12 +1,14 @@
-const accordionHeaders = document.querySelectorAll('.accordion-header');
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-accordionHeaders.forEach(header => {
-  header.addEventListener('click', function () {
-    const activeItem = document.querySelector('.accordion-item.active');
-    if (activeItem && activeItem !== this.parentElement) {
-      activeItem.classList.remove('active');
-    }
-
-    this.parentElement.classList.toggle('active');
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
   });
-});
+}
