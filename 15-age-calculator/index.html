@@ -4,19 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Age Calculator</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/15-age-calculator/styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     </head>
 
     <body>
-        <div class="container">
-            <h1>Age Calculator</h1>
-            <label for="birthdate">Enter your birthdate</label>
-            <input type="date" id="birthdate" name="birthdate">
-            <button onclick="calculateAge()">Calculate Age</button>
-            <p id="result"></p>
-
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <div class="input-group">
+            <label for="birthdate">Enter Your Birth Date:</label>
+            <input type="date" id="birthdate">
         </div>
+        
+        <button id="calculateBtn">Calculate Age</button>
+        
+        <div id="result" class="result">
+            <p></p>
+        </div>
+    </div>
+
     </body>
 
-    <script defer src="script.js"></script>
+    <script src="/15-age-calculator/script.js"></script>
 </html>
