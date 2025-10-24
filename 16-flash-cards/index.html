@@ -5,36 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flash Cards</title>
         <link rel="stylesheet" href="/16-flash-cards/styles.css">
-        <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     </head>
 
     <body>
-    <div class="flashcards-container">
         <h1>Flash Cards</h1>
 
-        <div class="progress-bar-container">
-            <div id="progressBar" class="progress-bar"></div>
-            <span id="progressText" class="progress-text"></span>
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
         </div>
 
-        <div class="card-wrapper">
-            <div id="flashcard" class="card">
-                <div class="card-face card-front">
-                    <p id="questionText" class="card-content"></p>
-                </div>
-                <div class="card-face card-back">
-                    <p id="answerText" class="card-content"></p>
-                </div>
-            </div>
+        <div class="card" id="flashcard">
+            <p id="question"></p>
         </div>
-        
-        <div class="navigation">
-            <button id="prevBtn" disabled>&lt; Previous</button>
-            <button id="flipBtn">Show Answer</button>
-            <button id="nextBtn">Next &gt;</button>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+        <div class="buttons">
+            <button class="btn-prev" onclick="previousCard()" disabled>&lt; Previous</button>
+            <button class="btn-primary" onclick="toggleAnswer()">Show Answer</button>
+            <button class="btn-next" onclick="nextCard()">Next &gt;</button>
+        </div>
+    <script src="/16-flash-cards/script.js"></script>
 </body>
 </html>

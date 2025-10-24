@@ -1,91 +1,65 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const flashcards = [
-        {
-            question: "What is the difference between var, let, and const?",
-            answer: "var is function-scoped and can be re-declared. let and const are block-scoped. let can be re-assigned, but const cannot (though object properties can still be modified)."
-        },
-        {
-            question: "What is an Immediately Invoked Function Expression (IIFE)?",
-            answer: "A function that runs as soon as it is defined. It's used to create a private scope for variables."
-        },
-        {
-            question: "Explain event bubbling.",
-            answer: "Event bubbling is when an event fired on a DOM element first triggers handlers on that element, then on its parent, then on its parent's parent, and so on up the hierarchy."
-        },
-        {
-            question: "What is a Closure?",
-            answer: "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment)."
-        }
+   const flashcards = [
+      {
+        question: "What is HTML?",
+        answer: "HTML stands for HyperText Markup Language and is used to create webpages."
+      },
+      {
+        question: "What is CSS used for?",
+        answer: "CSS (Cascading Style Sheets) is used for styling and layout of web pages."
+      },
+      {
+        question: "What is JavaScript?",
+        answer: "JavaScript is a programming language that makes web pages interactive."
+      },
+      {
+        question: "What does API stand for?",
+        answer: "API stands for Application Programming Interface, which allows communication between software systems."
+      }
     ];
 
-    let currentCardIndex = 0;
-    const cardCount = flashcards.length;
+    let currentIndex = 0;
+    let showingAnswer = false;
 
-    const flashcardElement = document.getElementById('flashcard');
-    const questionTextElement = document.getElementById('questionText');
-    const answerTextElement = document.getElementById('answerText');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const flipBtn = document.getElementById('flipBtn');
-    const progressBar = document.getElementById('progressBar');
-    const progressText = document.getElementById('progressText');
+    const questionElement = document.getElementById("question");
+    const progressBar = document.getElementById("progress-bar");
 
-    // --- Core Functions ---
-
-    function flipCard() {
-        flashcardElement.classList.toggle('flipped');
-        
-        if (flashcardElement.classList.contains('flipped')) {
-            flipBtn.textContent = 'Hide Answer';
-        } else {
-            flipBtn.textContent = 'Show Answer';
-        }
+    function updateCard() {
+      showingAnswer = false;
+      questionElement.textContent = flashcards[currentIndex].question;
+      updateProgress();
+      document.querySelector(".btn-primary").textContent = "Show Answer";
     }
 
-    function loadCard() {
-        const card = flashcards[currentCardIndex];
-        
-        flashcardElement.classList.remove('flipped');
-        flipBtn.textContent = 'Show Answer';
+    function toggleAnswer() {
+      showingAnswer = !showingAnswer;
+      questionElement.textContent = showingAnswer
+        ? flashcards[currentIndex].answer
+        : flashcards[currentIndex].question;
+      document.querySelector(".btn-primary").textContent = showingAnswer
+        ? "Hide Answer"
+        : "Show Answer";
+    }
 
-        questionTextElement.textContent = card.question;
-        answerTextElement.textContent = card.answer;
+    function nextCard() {
+      if (currentIndex < flashcards.length - 1) {
+        currentIndex++;
+        updateCard();
+      }
+    }
 
-        updateProgress();
-        updateNavigationButtons();
+    function previousCard() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCard();
+      }
     }
 
     function updateProgress() {
-        const currentNumber = currentCardIndex + 1;
-        const percentage = (currentNumber / cardCount) * 100;
-        
-        progressBar.style.width = `${percentage}%`;
-        progressText.textContent = `${currentNumber} of ${cardCount}`;
+      const total = flashcards.length;
+      const progress = ((currentIndex + 1) / total) * 100;
+      progressBar.style.width = progress + "%";
+      progressBar.textContent = `${currentIndex + 1} of ${total}`;
     }
 
-    function updateNavigationButtons() {
-        prevBtn.disabled = currentCardIndex === 0;
-        nextBtn.disabled = currentCardIndex === cardCount - 1;
-    }
-
-    // --- Event Listeners ---
-    
-    flipBtn.addEventListener('click', flipCard);
-    flashcardElement.addEventListener('click', flipCard); 
-
-    prevBtn.addEventListener('click', () => {
-        if (currentCardIndex > 0) {
-            currentCardIndex--;
-            loadCard();
-        }
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (currentCardIndex < cardCount - 1) {
-            currentCardIndex++;
-            loadCard();
-        }
-    });
-
-    loadCard();
-});
+    // Initialize
+    updateCard();
