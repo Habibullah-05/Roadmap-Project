@@ -22,12 +22,21 @@
 
     const questionElement = document.getElementById("question");
     const progressBar = document.getElementById("progress-bar");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const primaryBtn = document.getElementById("primaryBtn");
+
+
 
     function updateCard() {
       showingAnswer = false;
       questionElement.textContent = flashcards[currentIndex].question;
       updateProgress();
       document.querySelector(".btn-primary").textContent = "Show Answer";
+
+      // Disable/enable buttons based on current index
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === flashcards.length - 1;
     }
 
     function toggleAnswer() {
