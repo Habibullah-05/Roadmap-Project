@@ -39,6 +39,7 @@ h2 {
 
 #addTaskBtn {
   border: none;
+  border-radius: 8px;
   background: black;
   color: white;
   font-size: 20px;
