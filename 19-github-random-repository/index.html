@@ -8,6 +8,30 @@
 </head>
 
 <body>
-    
+    <div class="app">
+    <h1>🔍 GitHub Repository Finder</h1>
+    <div class="controls">
+      <select id="languageSelect">
+        <option value="">Select a Language</option>
+      </select>
+    </div>
+
+    <div id="stateMessage" class="message">Please select a language</div>
+
+    <div id="repoCard" class="repo hidden">
+      <h3 id="repoName"></h3>
+      <p id="repoDesc"></p>
+      <div class="repo-stats">
+        <span>⭐ <span id="stars"></span></span>
+        <span>🍴 <span id="forks"></span></span>
+        <span>⚠️ <span id="issues"></span></span>
+      </div>
+      <a id="repoLink" href="#" target="_blank">Visit Repo ↗</a>
+    </div>
+
+    <button id="refreshBtn" class="hidden">Refresh</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
