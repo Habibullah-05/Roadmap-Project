@@ -60,6 +60,10 @@ li {
     padding: 8px 0;
  }
 
+.education { 
+  padding: 10px;
+}
+
 .education-list li { 
     border-bottom: none; 
 }
