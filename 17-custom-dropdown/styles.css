@@ -28,9 +28,6 @@ body {
 .dropdown-btn.open img {
   transform: rotate(180deg);
 } 
-  /* .dropdown-btn.open .arrow {
-    transform: rotate(180deg);
-  } */
 
 img {
   width: 20px;
