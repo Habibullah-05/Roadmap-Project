@@ -72,3 +72,33 @@
 
     // Initialize
     updateCard();
+
+  function toggleAnswer() {
+  const questionElement = document.getElementById("question");
+
+  if (showingAnswer) {
+    // Hide the answer with animation
+    questionElement.classList.remove("fade-in");
+    questionElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      showingAnswer = false;
+      questionElement.textContent = flashcards[currentIndex].question;
+      questionElement.classList.remove("fade-out");
+      questionElement.classList.add("fade-in");
+      document.getElementById("primaryBtn").textContent = "Show Answer";
+    }, 300);
+  } else {
+    // Show the answer with animation
+    questionElement.classList.remove("fade-in");
+    questionElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      showingAnswer = true;
+      questionElement.textContent = flashcards[currentIndex].answer;
+      questionElement.classList.remove("fade-out");
+      questionElement.classList.add("fade-in");
+      document.getElementById("primaryBtn").textContent = "Hide Answer";
+    }, 300);
+  }
+}
