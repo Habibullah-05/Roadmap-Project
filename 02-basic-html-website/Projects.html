@@ -1,27 +1,118 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic HTML Design - Articles</title>
-  <link rel="stylesheet" href="/02-basic-html-website/css/Projects.css">
-    <link rel="icon" type="image/png" href="/02-basic-html-website/Pict/chill.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Habibullah</title>
+  <link rel="stylesheet" href="/02-basic-html-website/css/Projects.css" />
+  <link rel="icon" type="image/png" href="/02-basic-html-website/img/h-logo.jpg" />
 </head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img class="logo" src="/02-basic-html-website/img/h-logo.jpg" alt="logo">
+        <span class="your-name">Habibullah</span>
+      </div>
 
-  <header style="display: flex; align-items: center;">
-<nav class="navbar" >
-  <div class="navbar-left">
-    <div class="logo"><img class="logo" src="/02-basic-html-website/Pict/chill.jpg" alt="icon"></div>
-    <span class="your-name">Habibullah</span>
-  </div>
-
-  <div class="navbar-right" style="display: flex; align-items: center; gap: 10px;">
-    <a href="basic-html-design.html">Home</a><span>/</span> 
-    <a href="Projects.html">Projects</a><span>/</span> 
-    <a href="Articles.html">Articles</a><span>/</span> 
-    <a href="Contact.html">Contact</a>
-  </div>
-</nav>
+      <div class="navbar-right">
+        <a href="basic-html-design.html">Home</a>
+        <span class="sep">/</span>
+        <a class="active" href="Projects.html">Projects</a>
+        <span class="sep">/</span>
+        <a href="Articles.html">Articles</a>
+        <span class="sep">/</span>
+        <a href="Contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
+  <main class="container">
+    <section class="hero">
+      <h1>My Projects</h1>
+      <p class="lead">A curated selection of frontend projects, utilities and experiments. Click a card to view details or visit the repository.</p>
+    </section>
 
+    <section class="controls">
+      <div class="tag-filter">
+        <button class="tag active">All</button>
+        <button class="tag">Portfolio</button>
+        <button class="tag">UI</button>
+        <button class="tag">Games</button>
+        <button class="tag">Tools</button>
+      </div>
+      <div class="search-wrap">
+        <input type="search" class="search" placeholder="Search projects..." aria-label="Search projects">
+      </div>
+    </section>
+
+    <section class="projects-grid" aria-live="polite">
+      <!-- Project card -->
+      <article class="project-card">
+        <div class="project-media">
+          <img src="/02-basic-html-website/img/h-logo.jpg" alt="HTML Only Portfolio screenshot">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">HTML Only Portfolio</h3>
+          <p class="project-desc">A minimal portfolio built with semantic HTML and responsive layout — no frameworks.</p>
+          <div class="meta">
+            <span class="tag small">Portfolio</span>
+            <span class="tag small">HTML</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn" href="#">View</a>
+            <a class="btn ghost" href="#">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media">
+          <img src="/02-basic-html-website/img/h-logo.jpg" alt="Countdown Timer screenshot">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Countdown Timer</h3>
+          <p class="project-desc">Small interactive timer with start / pause / reset and keyboard accessibility.</p>
+          <div class="meta">
+            <span class="tag small">UI</span>
+            <span class="tag small">JS</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn" href="#">Demo</a>
+            <a class="btn ghost" href="#">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tall">
+        <div class="project-media">
+          <img src="/02-basic-html-website/img/h-logo.jpg" alt="Product upcoming page screenshot">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Product — Upcoming Page</h3>
+          <p class="project-desc">Landing page with newsletter signup, responsive grid and animated hero.</p>
+          <div class="meta">
+            <span class="tag small">UI</span>
+            <span class="tag small">CSS</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn" href="#">Preview</a>
+            <a class="btn ghost" href="#">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- add more cards as needed -->
+    </section>
+
+    <section class="more">
+      <p>Want to see everything? <a href="#" class="link">Visit my GitHub</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© all rights reserved — 2025</p>
+  </footer>
+
+</body>
 </html>
