@@ -1,26 +1,95 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic HTML Design - Articles</title>
-  <link rel="stylesheet" href="/02-basic-html-website/css/Articles.css">
-  <link rel="icon" type="image/png" href="/02-basic-html-website/Pict/chill.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Articles — Habibullah</title>
+  <link rel="stylesheet" href="/02-basic-html-website/css/Articles.css" />
+  <link rel="icon" type="image/png" href="/02-basic-html-website/img/h-logo.jpg" />
 </head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img class="logo" src="/02-basic-html-website/img/h-logo.jpg" alt="logo">
+        <span class="your-name">Habibullah</span>
+      </div>
 
-  <header style="display: flex; align-items: center;">
-<nav class="navbar" >
-  <div class="navbar-left">
-    <div class="logo"><img class="logo" src="/02-basic-html-website/Pict/chill.jpg" alt="icon"></div>
-    <span class="your-name">Habibullah</span>
-  </div>
-
-  <div class="navbar-right" style="display: flex; align-items: center; gap: 10px;">
-    <a href="basic-html-design.html">Home</a><span>/</span> 
-    <a href="Projects.html">Projects</a><span>/</span> 
-    <a href="Articles.html">Articles</a><span>/</span> 
-    <a href="Contact.html">Contact</a>
-  </div>
-</nav>
+      <div class="navbar-right">
+        <a href="basic-html-design.html">Home</a>
+        <span class="sep">/</span>
+        <a href="Projects.html">Projects</a>
+        <span class="sep">/</span>
+        <a class="active" href="Articles.html">Articles</a>
+        <span class="sep">/</span>
+        <a href="Contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
+  <main class="container">
+    <section class="articles-hero">
+      <h1>Articles & Notes</h1>
+      <p class="lead">Thoughts on development, design patterns, and learning new technologies.</p>
+    </section>
+
+    <section class="articles-grid">
+      <article class="article-card">
+        <div class="article-meta">
+          <time datetime="2025-01-15">Jan 15, 2025</time>
+          <span class="tag">Frontend</span>
+        </div>
+        <h2 class="article-title">
+          <a href="#">Building Accessible Web Components</a>
+        </h2>
+        <p class="article-excerpt">
+          A deep dive into creating reusable components that work for everyone. We'll explore ARIA attributes, keyboard navigation, and focus management.
+        </p>
+      </article>
+
+      <article class="article-card">
+        <div class="article-meta">
+          <time datetime="2025-01-10">Jan 10, 2025</time>
+          <span class="tag">JavaScript</span>
+        </div>
+        <h2 class="article-title">
+          <a href="#">Understanding the Event Loop</a>
+        </h2>
+        <p class="article-excerpt">
+          How JavaScript handles asynchronous operations under the hood. From the call stack to the callback queue.
+        </p>
+      </article>
+
+      <article class="article-card featured">
+        <div class="article-meta">
+          <time datetime="2025-01-05">Jan 5, 2025</time>
+          <span class="tag">CSS</span>
+        </div>
+        <h2 class="article-title">
+          <a href="#">Modern CSS Layout Techniques</a>
+        </h2>
+        <p class="article-excerpt">
+          Exploring Grid, Flexbox, and Container Queries. Building responsive layouts without media queries.
+        </p>
+      </article>
+
+      <!-- Add more article cards as needed -->
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Get notified when I publish new articles. No spam, unsubscribe anytime.</p>
+        <form class="signup-form" action="#">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© all rights reserved — 2025</p>
+  </footer>
+</body>
 </html>
