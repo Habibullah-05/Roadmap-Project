@@ -1,12 +1,12 @@
 body { 
-    font-family: sans-serif; 
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
     margin: 20px; 
 }
 
 .container {
      border: 1px solid black; 
      padding: 10px;
-      
+     margin: 20px;
     }
 
 h1 {
@@ -69,6 +69,7 @@ li {
 }
 
 .navbar {
+  font-size: large;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +77,15 @@ li {
   width: 100%;
 }
 
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
 .navbar-right a {
+  font-size: large;
   text-decoration: none;
   color: inherit;
   font-weight: bold;
@@ -101,6 +110,10 @@ li {
   
 }
 
+.threebox-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 
 .three-box {
     margin: 10px;
@@ -109,6 +122,12 @@ li {
     border: 2px solid #222;
     border-radius: 35px;
     padding: 15px;
+}
+
+.Reviews {
+    text-align: center; 
+    font-size: 1.2em; 
+    font-family: cursive;
 }
 
 footer {
